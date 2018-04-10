@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:id="@+id/textAreaScroller"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.example.android.justjava.MainActivity">
+
+        <EditText
+            android:id="@+id/name_field"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name_hint"
+            android:layout_marginTop="16dp"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_1"
+            android:textAllCaps="false"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/radio_button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dimples_choice_1"
+                android:textAppearance="?android:textAppearanceSmall" />
+            <RadioButton
+                android:id="@+id/radio_button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dimples_choice_2"
+                android:textAppearance="?android:textAppearanceSmall" />
+            <RadioButton
+                android:id="@+id/radio_button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dimples_choice_3"
+                android:textAppearance="?android:textAppearanceSmall" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/question_2"
+            android:textAllCaps="false" />
+
+        <EditText
+            android:id="@+id/editText_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_3"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="false" />
+
+        <CheckBox
+            android:id="@+id/masters_checkbox_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/masters_choice_1"
+            android:textSize="16sp"
+            android:paddingLeft="14dp"
+            android:paddingStart="14dp"/>
+
+        <CheckBox
+            android:id="@+id/masters_checkbox_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/masters_choice_2"
+            android:textSize="16sp"
+            android:paddingLeft="14dp"
+            android:paddingStart="14dp" />
+
+        <CheckBox
+            android:id="@+id/masters_checkbox_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/masters_choice_3"
+            android:textSize="16sp"
+            android:paddingLeft="14dp"
+            android:paddingStart="14dp"/>
+
+        <CheckBox
+            android:id="@+id/masters_checkbox_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/masters_choice_4"
+            android:textSize="16sp"
+            android:paddingLeft="14dp"
+            android:paddingStart="14dp"
+            android:layout_marginBottom="16dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_4"
+            android:layout_marginTop="30dp"
+            android:textAllCaps="false" />
+
+        <EditText
+            android:id="@+id/editText_four"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/degrees_hint"
+            android:layout_marginTop="16dp"
+            android:inputType="number" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="submitOrder"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:text="@string/submit_button" />
+
+
+    </LinearLayout>
+</ScrollView>
