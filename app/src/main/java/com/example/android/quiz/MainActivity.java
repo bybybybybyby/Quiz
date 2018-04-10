@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         EditText editTextName = findViewById(R.id.name_field);
         String stringName = editTextName.getText().toString();
         CharSequence text = getString(R.string.score_message, stringName, score);
-//        String text = getString(R.string.score_message, score);
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.setGravity(Gravity.CENTER | Gravity.CENTER_HORIZONTAL, 0, 0);
@@ -41,24 +40,29 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Checks answers and returns the total number correct.
      */
-
     public void calculateScore() {
 
-        //Question 1
+        /**
+         * Question 1 grading
+         */
         RadioButton radioButton = findViewById(R.id.radio_button_2);
         boolean checked = radioButton.isChecked();
         if (checked) {
             score += 1;
         }
 
-        //Question 2
+        /**
+         * Question 2 grading
+         */
         EditText editText2 = findViewById(R.id.editText_two);
         String q2 = editText2.getText().toString();
         if (q2.equalsIgnoreCase("Eldrick")) {
             score += 1;
         }
 
-        //Question 3
+        /**
+         * Question 3 grading
+         */
         CheckBox checkBox1 = findViewById(R.id.masters_checkbox_1);
         boolean checkBox1_checked = checkBox1.isChecked();
         CheckBox checkBox2 = findViewById(R.id.masters_checkbox_2);
@@ -71,7 +75,9 @@ public class MainActivity extends AppCompatActivity {
             score += 1;
         }
 
-        //Question 4
+        /**
+         * Question 4 grading
+         */
         EditText editText4 = findViewById(R.id.editText_four);
         String q4 = editText4.getText().toString();
         if (TextUtils.isEmpty(q4)) {
