@@ -9,17 +9,34 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText editTextName;
+    private RadioButton radioButton;
+    private EditText editText2;
+    private CheckBox checkBox1;
+    private CheckBox checkBox2;
+    private CheckBox checkBox3;
+    private CheckBox checkBox4;
+    private EditText editText4;
+    private int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        editTextName = findViewById(R.id.name_field);
+        radioButton = findViewById(R.id.radio_button_2);
+        editText2 = findViewById(R.id.editText_two);
+        checkBox1 = findViewById(R.id.masters_checkbox_1);
+        checkBox2 = findViewById(R.id.masters_checkbox_2);
+        checkBox3 = findViewById(R.id.masters_checkbox_3);
+        checkBox4 = findViewById(R.id.masters_checkbox_4);
+        editText4 = findViewById(R.id.editText_four);
     }
-
-    int score = 0;
 
     /**
      * Shows score message when Submit button is pressed.
@@ -27,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
         calculateScore();
         Context context = getApplicationContext();
-        EditText editTextName = findViewById(R.id.name_field);
         String stringName = editTextName.getText().toString();
         CharSequence text = getString(R.string.score_message, stringName, score);
         int duration = Toast.LENGTH_SHORT;
@@ -45,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Question 1 grading
          */
-        RadioButton radioButton = findViewById(R.id.radio_button_2);
         boolean checked = radioButton.isChecked();
         if (checked) {
             score += 1;
@@ -54,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Question 2 grading
          */
-        EditText editText2 = findViewById(R.id.editText_two);
         String q2 = editText2.getText().toString();
         if (q2.equalsIgnoreCase("Eldrick")) {
             score += 1;
@@ -63,22 +77,17 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Question 3 grading
          */
-        CheckBox checkBox1 = findViewById(R.id.masters_checkbox_1);
         boolean checkBox1_checked = checkBox1.isChecked();
-        CheckBox checkBox2 = findViewById(R.id.masters_checkbox_2);
         boolean checkBox2_checked = checkBox2.isChecked();
-        CheckBox checkBox3 = findViewById(R.id.masters_checkbox_3);
         boolean checkBox3_checked = checkBox3.isChecked();
-        CheckBox checkBox4 = findViewById(R.id.masters_checkbox_4);
         boolean checkBox4_checked = checkBox4.isChecked();
-        if (checkBox1_checked == false && checkBox2_checked == true && checkBox3_checked == false && checkBox4_checked == true) {
+        if (!checkBox1_checked && checkBox2_checked && !checkBox3_checked && checkBox4_checked) {
             score += 1;
         }
 
         /**
          * Question 4 grading
          */
-        EditText editText4 = findViewById(R.id.editText_four);
         String q4 = editText4.getText().toString();
         if (TextUtils.isEmpty(q4)) {
 

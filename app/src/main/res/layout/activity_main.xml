@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView android:id="@+id/textAreaScroller"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textAreaScroller"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbars="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    android:scrollbars="vertical">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -17,34 +17,37 @@
             android:id="@+id/name_field"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/name_hint"
             android:layout_marginTop="16dp"
+            android:hint="@string/name_hint"
             android:inputType="text" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/question_1"
-            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="10dp"/>
+            android:text="@string/question_1"
+            android:textAllCaps="false" />
 
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <RadioButton
                 android:id="@+id/radio_button_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dimples_choice_1"
                 android:textAppearance="?android:textAppearanceSmall" />
+
             <RadioButton
                 android:id="@+id/radio_button_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dimples_choice_2"
                 android:textAppearance="?android:textAppearanceSmall" />
+
             <RadioButton
                 android:id="@+id/radio_button_3"
                 android:layout_width="wrap_content"
@@ -56,8 +59,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
             android:text="@string/question_2"
             android:textAllCaps="false" />
 
@@ -71,73 +74,73 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/question_3"
-            android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/question_3"
             android:textAllCaps="false" />
 
         <CheckBox
             android:id="@+id/masters_checkbox_1"
+            style="@style/CheckBoxes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/masters_choice_1"
-            android:textSize="16sp"
             android:paddingLeft="14dp"
-            android:paddingStart="14dp"/>
+            android:paddingStart="14dp"
+            android:text="@string/masters_choice_1" />
 
         <CheckBox
             android:id="@+id/masters_checkbox_2"
+            style="@style/CheckBoxes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/masters_choice_2"
-            android:textSize="16sp"
             android:paddingLeft="14dp"
-            android:paddingStart="14dp" />
+            android:paddingStart="14dp"
+            android:text="@string/masters_choice_2" />
 
         <CheckBox
             android:id="@+id/masters_checkbox_3"
+            style="@style/CheckBoxes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/masters_choice_3"
-            android:textSize="16sp"
             android:paddingLeft="14dp"
-            android:paddingStart="14dp"/>
+            android:paddingStart="14dp"
+            android:text="@string/masters_choice_3" />
 
         <CheckBox
             android:id="@+id/masters_checkbox_4"
+            style="@style/CheckBoxes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/masters_choice_4"
-            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
             android:paddingLeft="14dp"
             android:paddingStart="14dp"
-            android:layout_marginBottom="16dp" />
+            android:text="@string/masters_choice_4" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/question_4"
             android:layout_marginTop="30dp"
+            android:text="@string/question_4"
             android:textAllCaps="false" />
 
         <EditText
             android:id="@+id/editText_four"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/degrees_hint"
             android:layout_marginTop="16dp"
+            android:hint="@string/degrees_hint"
             android:inputType="number" />
 
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:onClick="submitOrder"
-            android:gravity="center_horizontal"
-            android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:onClick="submitOrder"
             android:text="@string/submit_button" />
 
 
