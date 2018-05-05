@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Shows score message when Submit button is pressed.
+     * Shows score message in a toast when Submit button is pressed.
      */
     public void submitOrder(View view) {
         calculateScore();

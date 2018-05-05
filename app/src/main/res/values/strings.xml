@@ -1,5 +1,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Random Golf Quiz</string>
+    <string name="app_name">Golf Quiz</string>
     <string name="name_hint">Your Name</string>
 
     <string name="question_1">Q1:  How many dimples are on a 2017 Titleist Pro V1 golf ball?</string>
@@ -20,6 +20,6 @@
 
     <string name="submit_button">Submit</string>
 
-    <string name="score_message">Hey <xliff:g id="name" example="Brian">%s</xliff:g>!  You\'re score is <xliff:g id="score" example="2">%d</xliff:g> of 4.</string>
+    <string name="score_message">Hey <xliff:g id="name" example="Brian">%s</xliff:g>!  Your score is <xliff:g id="score" example="2">%d</xliff:g> of 4.</string>
 
 </resources>
